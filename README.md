@@ -22,3 +22,5 @@ OAUTH_TOKEN=your_oauth_key
 > !bbygirl {username},
 > !bbyboy {username},
 > !vip {username}
+
+Inspired use by https://dev.twitch.tv/docs/irc
