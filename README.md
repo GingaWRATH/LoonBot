@@ -2,11 +2,11 @@
 
 > Requires Node LTS / NPM
 
- > Run: npm install
+> Run: npm install
 
- >create oauth key https://twitchapps.com/tmi/
+> Create oauth key https://twitchapps.com/tmi/
 
- >Create .env file
+> Create .env file
 ```
 BOT_USERNAME=your_bot_name
 CHANNEL_NAME=you_channel_name
