@@ -43,7 +43,7 @@ function onMessageHandler(target, context, msg, self) {
     } // Ignore messages from the bot
 
     // Admin Only commands
-    if (context['display-name'] === process.env.CHANNEL_NAME || context['display-name'] === client.username) {
+    if (context['display-name'].toLowerCase() === process.env.CHANNEL_NAME.toLowerCase() || context['display-name'] === client.username) {
         result = adminCommands(msg);
 
         if (result !== false) {
