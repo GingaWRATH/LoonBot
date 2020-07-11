@@ -1,6 +1,8 @@
 .env
 .idea
 node_modules
-database/*.nosql
+database/loons.nosql
+database/sessions.nosql
+database/userData.nosql
 SORT
 
