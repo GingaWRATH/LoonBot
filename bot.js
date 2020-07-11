@@ -42,6 +42,7 @@ function onMessageHandler(target, context, msg, self) {
         return;
     } // Ignore messages from the bot
 
+    msg = msg.trim();
     // Admin Only commands
     if (context['display-name'].toLowerCase() === process.env.CHANNEL_NAME.toLowerCase() || context['display-name'] === client.username) {
         result = adminCommands(msg);
@@ -52,11 +53,11 @@ function onMessageHandler(target, context, msg, self) {
             }
         } else {
             // VIP CMD
-            if (command.match(/^!vip\s+(.*)/g)) {
+            if (msg.match(/^!vip\s+(.*)/g)) {
 
                 let regexp = /^!vip\s+(.*)/g;
 
-                const commandDetails = command.matchAll(regexp);
+                const commandDetails = msg.matchAll(regexp);
 
                 for (const match of commandDetails) {
                     vipUsername = match[1];
