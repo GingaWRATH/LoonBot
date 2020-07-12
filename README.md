@@ -24,3 +24,5 @@ OAUTH_TOKEN=your_oauth_key
 > !vip {username}
 
 Inspired use by https://dev.twitch.tv/docs/irc
+
+Want to contibute? [Read First](https://github.com/GingaWRATH/LoonBot/blob/master/CONTRIBUTING.md)
