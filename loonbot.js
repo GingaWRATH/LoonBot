@@ -31,7 +31,7 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 client.on("chat", (channel, user, msg, self) => {
-    if (self || checkFileIncludes('greetSession.txt', user['display-name'])) return;
+    if (self) return;
     //client.say(channel, `@${user['display-name']}, heya!`);
     return true;
 });
