@@ -6,7 +6,7 @@ babyWRATH = function (gender) {
 bbyDetails = function (parentName) {
     const fs = require('fs');
     try {
-        const data = fs.readFileSync('bbyNames.txt', 'UTF-8');
+        const data = fs.readFileSync('database/bbyNames.txt', 'UTF-8');
         const lines = data.split(/\r?\n/);
         bbys = [];
         bbyBoys = [];
