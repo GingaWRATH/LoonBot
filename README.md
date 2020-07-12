@@ -14,7 +14,7 @@ OAUTH_TOKEN=your_oauth_key
 ```
 
 
-> RUN: node bot.js
+> RUN: node loonbot.js
 
 
 > current cmds for channel owner / bot only

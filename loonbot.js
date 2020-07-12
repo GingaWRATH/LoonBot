@@ -1,7 +1,7 @@
 const tmi = require('tmi.js');
 require('dotenv').config()
-require('./files');
-require('./users');
+require('./lib/files');
+require('./lib/users');
 require('./cmds/commands');
 
 const client = new tmi.Client({

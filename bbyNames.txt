@@ -1,3 +1,0 @@
-{"name":"gingawrath","gender":"girl","babyName":"Wendy"}
-{"name":"gingawrath","gender":"boy","babyName":"Bryan"}
-{"name":"gingawrath","gender":"boy","babyName":"Calum"}
