@@ -1,7 +1,5 @@
 .env
 .idea
 node_modules
-database/*.txt
-database/*.nosql
 SORT
 

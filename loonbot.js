@@ -1,5 +1,6 @@
 const tmi = require('tmi.js');
-require('dotenv').config()
+require('dotenv').config();
+fs = require('fs');
 require('./lib/files');
 require('./lib/users');
 require('./cmds/commands');
@@ -21,7 +22,7 @@ const client = new tmi.Client({
 client.connect();
 
 // Register our event handlers (defined below)
-client.on('connected', function(){
+client.on('connected', function () {
     console.log('checking connected');
 });
 

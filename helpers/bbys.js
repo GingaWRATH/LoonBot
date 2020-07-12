@@ -1,13 +1,13 @@
 babyWRATH = function (gender) {
-    let names = readFile(gender);
+    let names = readTextFile(gender);
     return names[Math.floor(Math.random() * names.length)];
 }
 
 bbyDetails = function (parentName) {
-    const fs = require('fs');
+
     try {
-        const data = fs.readFileSync('database/bbyNames.txt', 'UTF-8');
-        const lines = data.split(/\r?\n/);
+        const data = fs.readFileSync('database/bbyNames.json');
+        const lines = data.toString().split(/\r?\n/);
         bbys = [];
         bbyBoys = [];
         // print all lines

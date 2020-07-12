@@ -1,6 +1,7 @@
 require('../../helpers/bbys');
 
 twitchBby = function(commandName) {
+
     if (commandName.match(/^!bby(girl|boy|wrath)\s+(.*)/g)) {
         let regexp = /^!bby(girl|boy|wrath)\s+(.*)/g;
 
@@ -10,6 +11,9 @@ twitchBby = function(commandName) {
             bbyGen = match[1];
             redeemUser = match[2];
         }
+
+        // Store User to userData if not exist
+        storeUserName(redeemUser.toLowerCase());
 
         switch (bbyGen) {
             case 'girl':
@@ -25,10 +29,12 @@ twitchBby = function(commandName) {
 
         const name = babyWRATH(genderChoice);
 
-        let storeData = {name: redeemUser, gender: genderChoice.toLowerCase(), babyName: name.trim()};
+        const { v4: uuidv4 } = require('uuid');
 
-        storeName(storeData);
-        bbyDetails(redeemUser);
+        let storeData = { username: redeemUser, gender: genderChoice.toLowerCase(), babyName: name.trim(), _id: uuidv4().toString() };
+
+        writeFile('database/bbyNames.json', storeData);
+        //bbyDetails(redeemUser);
         return ['`Congrats! ' + redeemUser +' & Ginga have had a Baby ' + genderChoice + ' named ' + name + '!!`'];
     }
     return false;
